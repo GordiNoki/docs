@@ -1,0 +1,85 @@
+backend:
+  name: github
+  repo: GordiNoki/momentum-mod-docs
+  base_url: https://ow0.ru/dehook
+
+site_url: "{{- site.BaseURL }}"
+
+publish_mode: editorial_workflow
+media_folder: "static/images"
+public_folder: "images"
+search: true
+
+collections:
+  - name: "angelscript"
+    label: "Angelscript"
+    folder: "content/docs/angelscript"
+    fields: &docs_fields
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          tagname: "h1",
+          required: false,
+        }
+      - {
+          label: "Long Title",
+          name: "long_title",
+          widget: "string",
+          tagname: "h1",
+          required: false,
+        }
+      - {
+          label: "Categories",
+          name: "categories",
+          widget: "list",
+          required: false,
+        }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - {
+          label: "Weight",
+          name: "weight",
+          widget: "number",
+          required: false,
+          tagname: "",
+        }
+      - {
+          label: "Enable math",
+          name: "math",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - {
+          label: "Requires mapping",
+          name: "requires_mapping",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          hint: "Main content goes here.",
+        }
+  - name: "command"
+    label: "Command"
+    folder: "content/docs/command"
+    fields: *docs_fields
+  - name: "entity"
+    label: "Entity"
+    folder: "content/docs/entity"
+    fields: *docs_fields
+  - name: "guide"
+    label: "Guide"
+    folder: "content/docs/guide"
+    fields: *docs_fields
+  - name: "shaders"
+    label: "Shaders"
+    folder: "content/docs/shaders"
+    fields: *docs_fields
+  - name: "var"
+    label: "Convars"
+    folder: "content/docs/var"
+    fields: *docs_fields

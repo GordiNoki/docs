@@ -46,3 +46,7 @@ menu:
 markup:
   highlight:
     style: onedark
+
+outputFormats:
+  yaml:
+    mediaType: application/yaml
