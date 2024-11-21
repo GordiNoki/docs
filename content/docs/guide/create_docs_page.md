@@ -1,13 +1,15 @@
 ---
 title: Creating Docs Pages
+long_title: ""
 categories:
   - guide
 tags:
   - meta
   - contributing
+weight: ""
 math: true
+requires_mapping: false
 ---
-
 All pages on this site are hosted in the [Momentum Mod docs GitHub repository](https://github.com/momentum-mod/docs). The site uses [Hugo](https://gohugo.io/) with the [Hugo Book](https://github.com/alex-shpak/hugo-book), and is entirely open source.
 
 Content on the site is written using [Markdown](https://www.markdownguide.org/), a simple and lightweight markup language. This allows docs pages to be written in a much more accessible format than HTML.
@@ -128,15 +130,13 @@ Overrides the value of `title` used at the top of the page. For when a page shou
 
 Enables math typesetting using [KaTeX](https://katex.org/). By setting `math` to `true`, any blocks enclosed with `$$` will be treated as LaTeX code. For example,
 
-```$$ e^{ \pm i\theta } = \cos \theta \pm i\sin \theta $$```
+```
+undefined$$ e^{ \pm i\theta } = \cos \theta \pm i\sin \theta $$
+```
 
 will be rendered as
 
 $$ e^{ \pm i\theta } = \cos \theta \pm i\sin \theta $$
-
-#### `requires_mapping`
-
-If `true`, displays a warning at the top of the page that the `-mapping` launch option is required. _(will be removed in the future when `-mapping` mode is removed)_
 
 #### command only: `safeguard`
 
